@@ -1,0 +1,12 @@
+[Unit]
+Description=Синхронизация dotfiles с GitHub при запуске
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=levkopo
+ExecStart=/home/levkopo/.config/levkopo-dotfiles/sync.sh
+
+[Install]
+WantedBy=multi-user.target
