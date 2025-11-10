@@ -2,16 +2,18 @@
 set -e
 
 DOTFILES_REPO="https://github.com/levkopo/dotfiles"
-DOTFILES_DIR="/usr/share/levkopo-dotfiles"
+DOTFILES_DIR="$HOME/.config/levkopo-dotfiles"
 BACKUP_DIR="$HOME/.config/config-backups/$(date +%F_%T)"
 
 echo "Клонирование репозитория в $DOTFILES_DIR..."
 [ -d "$DOTFILES_DIR" ] && rm -rf "$DOTFILES_DIR"
+mkdir -p "$DOTFILES_DIR"
+chmod 755 "$DOTFILES_DIR"
 git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
 cd "$DOTFILES_DIR"
 
 echo "Создание резервной копии старых конфигов в $BACKUP_DIR..."
-sudo mkdir -p "$BACKUP_DIR"
+mkdir -p "$BACKUP_DIR"
 
 CONFIGS=(ags fastfetch hypr)
 
@@ -23,6 +25,8 @@ for config in "${CONFIGS[@]}"; do
     echo "Создание символической ссылки для $config..."
     ln -s "$DOTFILES_DIR/configs/$config" "$HOME/.config/$config"
 done
+
+hyprctl reload
 
 echo "Пользовательские конфиги успешно установлены."
 
