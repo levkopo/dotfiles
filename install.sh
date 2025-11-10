@@ -47,11 +47,11 @@ echo "Plymouth успешно настроен."
 echo "Настройка SDDM..."
 sudo cp -r ./sddm/themes/* /usr/share/sddm/themes/
 sudo cp ./sddm/sddm.conf /etc/sddm.conf
-sudo mkinitcpio -P
 
 echo "SDDM успешно настроен."
 
 echo "Настройка службы обновления.."
+chmod +x sync.sh
 sudo cp dotfiles-sync.service /etc/systemd/system/dotfiles-sync.service
 sudo systemctl daemon-reload
 sudo systemctl enable dotfiles-sync.service
