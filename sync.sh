@@ -11,7 +11,7 @@ git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
 cd "$DOTFILES_DIR"
 
 echo "Создание резервной копии старых конфигов в $BACKUP_DIR..."
-mkdir -p "$BACKUP_DIR"
+sudo mkdir -p "$BACKUP_DIR"
 
 CONFIGS=(ags fastfetch hypr)
 
