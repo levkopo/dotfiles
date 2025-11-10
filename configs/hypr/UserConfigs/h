@@ -1,0 +1,108 @@
+[38;2;131;148;150m───────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+       [38;2;131;148;150m│ [0mFile: [1mUserKeybinds.conf.bak[0m
+[38;2;131;148;150m───────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;2;131;148;150m   1[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #[0m
+[38;2;131;148;150m   2[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# This is where you put your own keybinds. Be Mindful to check as well ~/.config/hypr/configs/Keybinds.conf to avoid conflict[0m
+[38;2;131;148;150m   3[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# if you think I should replace the Pre-defined Keybinds in ~/.config/hypr/configs/Keybinds.conf , submit an issue or let me know in DC and present [0m
+[38;2;131;148;150m    [0m   [38;2;131;148;150m│[0m [38;2;248;248;242mme a valid reason as to why, such as conflicting with global shortcuts, etc etc[0m
+[38;2;131;148;150m   4[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m   5[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# See https://wiki.hyprland.org/Configuring/Keywords/ for more settings and variables[0m
+[38;2;131;148;150m   6[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# See also Laptops.conf for laptops keybinds [0m
+[38;2;131;148;150m   7[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m   8[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# /* ---- ✴️ Variables ✴️ ---- */  #[0m
+[38;2;131;148;150m   9[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m$mainMod = SUPER[0m
+[38;2;131;148;150m  10[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m$scriptsDir = $HOME/.config/hypr/scripts[0m
+[38;2;131;148;150m  11[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m$UserScripts = $HOME/.config/hypr/UserScripts[0m
+[38;2;131;148;150m  12[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m$UserConfigs = $HOME/.config/hypr/UserConfigs[0m
+[38;2;131;148;150m  13[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  14[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# settings for User defaults apps - set your default terminal and file manager on this file[0m
+[38;2;131;148;150m  15[0m   [38;2;131;148;150m│[0m [38;2;248;248;242msource= $UserConfigs/01-UserDefaults.conf[0m
+[38;2;131;148;150m  16[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  17[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# common shortcuts[0m
+[38;2;131;148;150m  18[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m#bindr = $mainMod, $mainMod_L, exec, pkill rofi || rofi -show drun -modi drun,filebrowser,run,window # Super Key to Launch rofi menu[0m
+[38;2;131;148;150m  19[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, D, exec, pkill rofi || true && rofi -show drun -modi drun,filebrowser,run,window # Main Menu (APP Launcher)[0m
+[38;2;131;148;150m  20[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# bind = $mainMod, B, exec, xdg-open "https://"  # default browser[0m
+[38;2;131;148;150m  21[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m#bind = $mainMod, A, exec, pkill rofi || true && ags -t 'overview' # desktop overview (if installed)[0m
+[38;2;131;148;150m  22[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, A, global, quickshell:overviewToggle # desktop overview (if installed)[0m
+[38;2;131;148;150m  23[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, Return, exec, $term  #terminal[0m
+[38;2;131;148;150m  24[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, F, exec, nautilus #file manager[0m
+[38;2;131;148;150m  25[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, K, exec, kdenlive  # Launch Kitty terminal[0m
+[38;2;131;148;150m  26[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, B, exec, google-chrome-stable # Launch Firefox[0m
+[38;2;131;148;150m  27[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, R, exec, foliate # Launch foliate the eBook readers[0m
+[38;2;131;148;150m  28[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, V, exec, $scriptsDir/ClipManager.sh # Clipboard Manager[0m
+[38;2;131;148;150m  29[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, C, exec, /usr/bin/intellij-idea-ultimate-edition # Visual Studio Code[0m
+[38;2;131;148;150m  30[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, O, exec, obsidian --ozone-platform=x11 # Obsidian[0m
+[38;2;131;148;150m  31[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, S, exec, spotify-launcher # Spotify[0m
+[38;2;131;148;150m  32[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, X, exec, vesktop # Vesktop(Discord)[0m
+[38;2;131;148;150m  33[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, T, exec, Telegram # Vesktop(Discord)[0m
+[38;2;131;148;150m  34[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, M, exec, fdm # Free Downlaod Manager[0m
+[38;2;131;148;150m  35[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, E, exec, kitty --title tmuxifier -e tmuxifier load-session web-dev  # Launch tmuxifier[0m
+[38;2;131;148;150m  36[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, W, exec, wasistlos # Whatsapp-Linux[0m
+[38;2;131;148;150m  37[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = ALT, N, exec, nmgui # Whatsapp-Linux[0m
+[38;2;131;148;150m  38[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  39[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# FEATURES / EXTRAS[0m
+[38;2;131;148;150m  40[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, H, exec, $scriptsDir/KeyHints.sh # help / cheat sheet[0m
+[38;2;131;148;150m  41[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, R, exec, $scriptsDir/Refresh.sh # Refresh waybar, swaync, rofi[0m
+[38;2;131;148;150m  42[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, O, exec, $scriptsDir/ChangeBlur.sh # Toggle blur settings [0m
+[38;2;131;148;150m  43[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# bind = $mainMod SHIFT, G, exec, $scriptsDir/GameMode.sh # Toggle animations ON/OFF[0m
+[38;2;131;148;150m  44[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, G, exec, $UserScripts/MountGdrive.sh # Mount Gdrive on loccal machine[0m
+[38;2;131;148;150m  45[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, T, exec, $UserScripts/Toggle-tuned.sh # Toggle animations ON/OFF[0m
+[38;2;131;148;150m  46[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, D, exec, $UserScripts/SyncDotfiles.sh # Sync dotfiles[0m
+[38;2;131;148;150m  47[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, B, exec, $UserScripts/SyncBlog.sh # Sync dotfiles[0m
+[38;2;131;148;150m  48[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, C, exec, $UserScripts/RcloneSync.sh # Sync Document folder to google drive[0m
+[38;2;131;148;150m  49[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, L, exec, $scriptsDir/ChangeLayout.sh # Toggle Master or Dwindle Layout[0m
+[38;2;131;148;150m  50[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, P, exec, hyprpicker -a / –autocopy # color picker for hyprland[0m
+[38;2;131;148;150m  51[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, V, exec, systemd-run --user --scope $scriptsDir/parrotOS-KVM.sh # start yazi in foot[0m
+[38;2;131;148;150m  52[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# bind = $mainMod SHIFT, B, exec, /home/ahmad/Documents/blog/quickScript.sh # Hugo file sync[0m
+[38;2;131;148;150m  53[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, F, fullscreen # whole full screen[0m
+[38;2;131;148;150m  54[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, Return, exec, $scriptsDir/Dropterminal.sh $term # Dropdown terminal[0m
+[38;2;131;148;150m  55[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod CTRL, F, fullscreen, 1 # fake full screen[0m
+[38;2;131;148;150m  56[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod, SPACE, togglefloating, #Float Mode[0m
+[38;2;131;148;150m  57[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod ALT, SPACE, exec, hyprctl dispatch workspaceopt allfloat #All Float Mode[0m
+[38;2;131;148;150m  58[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod ALT, E, exec, $scriptsDir/RofiEmoji.sh # emoji menu[0m
+[38;2;131;148;150m  59[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  60[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  61[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# Desktop zooming or magnifier[0m
+[38;2;131;148;150m  62[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod ALT, mouse_down, exec, hyprctl keyword cursor:zoom_factor "$(hyprctl getoption cursor:zoom_factor | awk 'NR==1 {factor = $2; if (fac[0m
+[38;2;131;148;150m    [0m   [38;2;131;148;150m│[0m [38;2;248;248;242mtor < 1) {factor = 1}; print factor * 2.0}')"[0m
+[38;2;131;148;150m  63[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod ALT, mouse_up, exec, hyprctl keyword cursor:zoom_factor "$(hyprctl getoption cursor:zoom_factor | awk 'NR==1 {factor = $2; if (facto[0m
+[38;2;131;148;150m    [0m   [38;2;131;148;150m│[0m [38;2;248;248;242mr < 1) {factor = 1}; print factor / 2.0}')" [0m
+[38;2;131;148;150m  64[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  65[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m## NOTES for ja (Hyprland version 0.39 (Ubuntu 24.04))[0m
+[38;2;131;148;150m  66[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m#bind = $mainMod ALT, mouse_down, exec, hyprctl keyword misc:cursor_zoom_factor "$(hyprctl getoption misc:cursor_zoom_factor | awk 'NR==1 {factor = [0m
+[38;2;131;148;150m    [0m   [38;2;131;148;150m│[0m [38;2;248;248;242m$2; if (factor < 1) {factor = 1}; print factor * 2.0}')"[0m
+[38;2;131;148;150m  67[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m#bind = $mainMod ALT, mouse_up, exec, hyprctl keyword misc:cursor_zoom_factor "$(hyprctl getoption misc:cursor_zoom_factor | awk 'NR==1 {factor = $2[0m
+[38;2;131;148;150m    [0m   [38;2;131;148;150m│[0m [38;2;248;248;242m; if (factor < 1) {factor = 1}; print factor / 2.0}')" [0m
+[38;2;131;148;150m  68[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  69[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# Waybar / Bar related[0m
+[38;2;131;148;150m  70[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod CTRL ALT, B, exec, pkill -SIGUSR1 waybar # Toggle hide/show waybar [0m
+[38;2;131;148;150m  71[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod CTRL, B, exec, $scriptsDir/WaybarStyles.sh # Waybar Styles Menu[0m
+[38;2;131;148;150m  72[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod ALT, B, exec, $scriptsDir/WaybarLayout.sh # Waybar Layout Menu[0m
+[38;2;131;148;150m  73[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  74[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# FEATURES / EXTRAS (UserScripts)[0m
+[38;2;131;148;150m  75[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, M, exec, $UserScripts/RofiBeats.sh # online music using rofi[0m
+[38;2;131;148;150m  76[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, W, exec, $UserScripts/WallpaperSelect.sh # Select wallpaper to apply[0m
+[38;2;131;148;150m  77[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, W, exec, $UserScripts/WallpaperEffects.sh # Wallpaper Effects by imagemagick[0m
+[38;2;131;148;150m  78[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = CTRL ALT, W, exec, $UserScripts/WallpaperRandom.sh # Random wallpapers[0m
+[38;2;131;148;150m  79[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod CTRL, O, exec, hyprctl setprop active opaque toggle # disable opacity on active window[0m
+[38;2;131;148;150m  80[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, K, exec, $scriptsDir/KeyBinds.sh # search keybinds via rofi[0m
+[38;2;131;148;150m  81[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, A, exec, $scriptsDir/Animations.sh #hyprland animations menu[0m
+[38;2;131;148;150m  82[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod SHIFT, Z, exec, $UserScripts/ZshChangeTheme.sh # Change oh-my-zsh theme[0m
+[38;2;131;148;150m  83[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# bindln = ALT_L, SHIFT_L, exec, $scriptsDir/SwitchKeyboardLayout.sh # Change keyboard layout globally[0m
+[38;2;131;148;150m  84[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# bindln = SHIFT_L, ALT_L, exec, $scriptsDir/Tak0-Per-Window-Switch.sh # Change keyboard layout locally for each window[0m
+[38;2;131;148;150m  85[0m   [38;2;131;148;150m│[0m [38;2;248;248;242mbind = $mainMod CTRL, C, exec, $UserScripts/RofiCalc.sh # calculator (qalculate)[0m
+[38;2;131;148;150m  86[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  87[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  88[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# For passthrough keyboard into a VM[0m
+[38;2;131;148;150m  89[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# bind = $mainMod ALT, P, submap, passthru[0m
+[38;2;131;148;150m  90[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m#submap = passthru[0m
+[38;2;131;148;150m  91[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# to unbind[0m
+[38;2;131;148;150m  92[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m#bind = $mainMod ALT, P, submap, reset[0m
+[38;2;131;148;150m  93[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m#submap = reset[0m
+[38;2;131;148;150m  94[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  95[0m   [38;2;131;148;150m│[0m 
+[38;2;131;148;150m  96[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# Removed One [0m
+[38;2;131;148;150m  97[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# bind = $mainMod, S, exec, $scriptsDir/RofiSearch.sh # Google search using rofi[0m
+[38;2;131;148;150m  98[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# bind = $mainMod CTRL, R, exec, $scriptsDir/RofiThemeSelector.sh # KooL Rofi Menu Theme Selector[0m
+[38;2;131;148;150m  99[0m   [38;2;131;148;150m│[0m [38;2;248;248;242m# bind = $mainMod CTRL SHIFT, R, exec, pkill rofi || true && $scriptsDir/RofiThemeSelector-modified.sh # modified Rofi Theme Selector[0m
+[38;2;131;148;150m───────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
