@@ -43,4 +43,12 @@ sudo cp ./plymouth/plymouthd.conf /etc/plymouth/plymouthd.conf
 sudo mkinitcpio -P
 
 echo "Plymouth успешно настроен."
+
+echo "Настройка SDDM..."
+sudo cp -r ./sddm/themes/* /usr/share/sddm/themes/
+sudo cp ./sddm/sddm.conf /etc/sddm.conf
+sudo mkinitcpio -P
+
+echo "SDDM успешно настроен."
+
 echo "Установка завершена! Перезагрузите систему, чтобы увидеть все изменения."
